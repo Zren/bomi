@@ -112,7 +112,7 @@ Item {
         AutoDisplayZone {
             id: rightEdge; hideDelay: 2500
             y: right.y + titleItem.h; anchors.right: parent.right
-            width: 15; height: parent.height - titleItem.h
+            width: 15; height: 15
             auto: App.theme.controls.showToolOnMouseOverEdge
             target: App.playlist; box: right;
             blockHiding: right.blockHiding
@@ -121,7 +121,7 @@ Item {
         AutoDisplayZone {
             id: leftEdge; hideDelay: 2500
             y: left.y + titleItem.h; anchors.left: parent.left
-            width: 15; height: parent.height - titleItem.h
+            width: 15; height: 15
             auto: App.theme.controls.showToolOnMouseOverEdge
             target: App.history; box: left;
             blockHiding: left.blockHiding
