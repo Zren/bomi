@@ -299,6 +299,9 @@ auto MainWindow::mouseDoubleClickEvent(QMouseEvent *event) -> void
         QQuickView::mouseDoubleClickEvent(event);
     if (event->isAccepted())
         return;
+    if (event->buttons() & Qt::LeftButton && d->singleClick.action && d->singleClick.action == d->menu(u"play"_q)[u"play-pause"_q]) {
+        d->trigger(d->menu(u"play"_q)[u"play-pause"_q]);
+    }
     d->singleClick.unset();
     if (event->buttons() & Qt::LeftButton) {
         const auto act = d->menu.action(d->actionId(MsBh::DoubleClick, event));
@@ -336,8 +339,12 @@ auto MainWindow::mouseReleaseEvent(QMouseEvent *event) -> void
         return;
     if (pressed == Qt::LeftButton) {
         if (singleClickAction) {
-            d->singleClick.action = singleClickAction;
-            d->singleClick.timer.start(qApp->doubleClickInterval() + 10);
+            if (singleClickAction == d->menu(u"play"_q)[u"play-pause"_q]) {
+                d->trigger(d->menu.action(d->actionId(mb, event)));
+            } else {
+                d->singleClick.action = singleClickAction;
+                d->singleClick.timer.start(qApp->doubleClickInterval() + 10);
+            }
         }
     } else
         d->trigger(d->menu.action(d->actionId(mb, event)));
