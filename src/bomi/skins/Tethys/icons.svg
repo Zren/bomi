@@ -17,9 +17,9 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="icons.svg"
-   inkscape:export-filename="/home/xylosper/dev/bomi/src/bomi/skins/Tethys/to-compact-pressed.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
+   inkscape:export-filename="/home/chris/Code/bomi/src/bomi/skins/Tethys/60fps-pressed.png"
+   inkscape:export-xdpi="135"
+   inkscape:export-ydpi="135">
   <defs
      id="defs4">
     <filter
@@ -483,6 +483,32 @@
          stdDeviation="0.96390216"
          id="feGaussianBlur5983" />
     </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4858"
+       x="-0.24867052"
+       width="1.497341"
+       y="-0.23191375"
+       height="1.4638275">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.96661359"
+         id="feGaussianBlur4860" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5334"
+       x="-0.24867052"
+       width="1.497341"
+       y="-0.23191375"
+       height="1.4638275">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.96661359"
+         id="feGaussianBlur5336" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -491,17 +517,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="32"
-     inkscape:cx="13.21015"
-     inkscape:cy="11.504484"
+     inkscape:zoom="13.94"
+     inkscape:cx="83.851394"
+     inkscape:cy="25.176207"
      inkscape:document-units="px"
-     inkscape:current-layer="g8518"
+     inkscape:current-layer="layer1"
      showgrid="true"
      showguides="false"
      units="px"
      inkscape:window-width="1920"
-     inkscape:window-height="1021"
-     inkscape:window-x="-4"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
@@ -1864,6 +1890,153 @@
          id="path9661"
          d="m -20.417759,777.69607 -0.99983,1.1154 c 0.22886,0.2064 0.37681,0.5004 0.37681,0.8329 0,0.3324 -0.14795,0.6286 -0.37681,0.8349 l 0.99876,1.1155 c 0.53495,-0.4811 0.88101,-1.1727 0.88101,-1.9494 0,-0.7757 -0.34584,-1.4679 -0.87994,-1.9493 z"
          style="color:#000000;fill:#ffffff" />
+    </g>
+    <g
+       id="g4881"
+       transform="translate(83.680127,-39.202799)">
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470"
+         y="1044.1373"
+         x="8.2356873"
+         style="font-style:normal;font-weight:normal;font-size:29.45048141px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle"
+           y="1044.1373"
+           x="8.2356873"
+           id="tspan4472"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle"
+           id="tspan4474"
+           y="1049.6593"
+           x="8.2356873"
+           sodipodi:role="line">FPS</tspan></text>
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470-4"
+         y="1043.4373"
+         x="8.2356873"
+         style="font-style:normal;font-weight:normal;font-size:29.45048141px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d4d4d4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#d4d4d4;fill-opacity:1"
+           y="1043.4373"
+           x="8.2356873"
+           id="tspan4472-4"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#d4d4d4;fill-opacity:1"
+           id="tspan4474-3"
+           y="1048.9592"
+           x="8.2356873"
+           sodipodi:role="line">FPS</tspan></text>
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470-4-0"
+         y="1043.4373"
+         x="8.2356873"
+         style="font-style:normal;font-weight:normal;font-size:29.45048141px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d4d4d4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4858)"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#d4d4d4;fill-opacity:1"
+           y="1043.4373"
+           x="8.2356873"
+           id="tspan4472-4-6"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#d4d4d4;fill-opacity:1"
+           id="tspan4474-3-4"
+           y="1048.9592"
+           x="8.2356873"
+           sodipodi:role="line">FPS</tspan></text>
+    </g>
+    <g
+       id="g4568-2"
+       transform="matrix(0.73626204,0,0,0.73626204,80.198374,265.49896)">
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470-1"
+         y="1043.974"
+         x="8.1999512"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle"
+           y="1043.974"
+           x="8.1999512"
+           id="tspan4472-9"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle"
+           id="tspan4474-7"
+           y="1051.474"
+           x="8.1999512"
+           sodipodi:role="line">FPS</tspan></text>
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470-4-6"
+         y="1043.0231"
+         x="8.1999512"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#ffffff"
+           y="1043.0231"
+           x="8.1999512"
+           id="tspan4472-4-8"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.5px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4474-3-2"
+           y="1050.5231"
+           x="8.1999512"
+           sodipodi:role="line">FPS</tspan></text>
+    </g>
+    <g
+       id="g5338">
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470-1-3"
+         y="1019.2576"
+         x="89.235687"
+         style="font-style:normal;font-weight:normal;font-size:29.45048141px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle"
+           y="1019.2576"
+           x="89.235687"
+           id="tspan4472-9-6"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle"
+           id="tspan4474-7-9"
+           y="1026.7576"
+           x="89.235687"
+           sodipodi:role="line">FPS</tspan></text>
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470-4-6-0"
+         y="1018.5575"
+         x="89.235687"
+         style="font-style:normal;font-weight:normal;font-size:29.45048141px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#ffffff"
+           y="1018.5575"
+           x="89.235687"
+           id="tspan4472-4-8-4"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4474-3-2-8"
+           y="1026.0575"
+           x="89.235687"
+           sodipodi:role="line">FPS</tspan></text>
+      <text
+         sodipodi:linespacing="100%"
+         id="text4470-4-6-0-5"
+         y="1018.5575"
+         x="89.235687"
+         style="font-style:normal;font-weight:normal;font-size:29.45048141px;line-height:100%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter5334)"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#ffffff"
+           y="1018.5575"
+           x="89.235687"
+           id="tspan4472-4-8-4-1"
+           sodipodi:role="line">60</tspan><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.5219655px;line-height:100%;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';text-align:center;text-anchor:middle;fill:#ffffff"
+           id="tspan4474-3-2-8-2"
+           y="1024.0795"
+           x="89.235687"
+           sodipodi:role="line">FPS</tspan></text>
     </g>
   </g>
 </svg>

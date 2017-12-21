@@ -63,6 +63,10 @@ B.AppWithDock {
                 anchors.verticalCenter: parent.verticalCenter
             }
             B.Button {
+                size: 24; icon.prefix: "60fps"; action: "video/motion"
+                anchors.verticalCenter: parent.verticalCenter
+            }
+            B.Button {
                 size: 24; icon.prefix: "playlist"
                 anchors.verticalCenter: parent.verticalCenter
                 action: "tool/playlist/toggle"; action2: "tool/playlist"
