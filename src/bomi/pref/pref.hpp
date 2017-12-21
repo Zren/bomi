@@ -70,7 +70,7 @@ private:
     P0(bool, load_last, true)
     P0(bool, fit_to_video, true)
     P0(bool, use_mpris2, true)
-    P0(bool, pause_minimized, true)
+    P0(bool, pause_minimized, false)
     P0(bool, pause_video_only, true)
     P0(bool, remember_stopped, true)
     P0(bool, resume_ignore_in_playlist, false)
