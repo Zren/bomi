@@ -68,7 +68,7 @@ private:
     P0(int, jr_port, 2020)
 
     P0(bool, load_last, true)
-    P0(bool, fit_to_video, false)
+    P0(bool, fit_to_video, true)
     P0(bool, use_mpris2, true)
     P0(bool, pause_minimized, true)
     P0(bool, pause_video_only, true)
