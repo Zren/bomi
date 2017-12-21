@@ -20,19 +20,24 @@ Item {
     property real trackingMinY: 0
     property real trackingMaxY: height
 
+    readonly property bool titleItemEnabled: App.theme.controls.titleBarEnabled && App.window.frameless
+    readonly property bool titleItemRevealed: titleItemEnabled && !App.window.fullscreen && titleBarVisible
+    readonly property alias titleItemArea: titleItemArea
+
     function dismissTools() {
         App.playlist.visible = App.history.visible = false
     }
 
     MouseArea {
+        id: titleItemArea
         width: parent.width; height: 24
         z: toolStyle.z - 1
         onPressed: mouse.accepted = false
+        hoverEnabled: titleItemEnabled
         Item {
             id: titleItem
             anchors.fill: parent
-            visible: App.theme.controls.titleBarEnabled && titleBarVisible
-                        && !App.window.fullscreen && App.window.frameless
+            visible: titleItemRevealed
             readonly property real h: visible ? height : 0
             Rectangle {
                 width: parent.width; height: parent.height

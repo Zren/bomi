@@ -14,6 +14,7 @@ B.AppWithDock {
     readonly property int s_shadow: 1
     property bool compact: false
 
+    titleBarVisible: titleItemArea.containsMouse
     overlaps: true
     trackingMinY: height - Math.max(height * 0.35, bottomControls.height)
 
