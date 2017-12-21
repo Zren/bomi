@@ -9,7 +9,7 @@ struct ControlsTheme {
     bool showOnMouseMoved = true;
     bool showLocationsInPlaylist = true;
     bool showToolOnMouseOverEdge = false;
-    bool showPreviewOnMouseOverSeekBar = false;
+    bool showPreviewOnMouseOverSeekBar = true;
     bool showKeyframeForPreview = true;
     bool showMediaTitleForLocalFilesInHistory = false;
     bool showMediaTitleForUrlsInHistory = true;
