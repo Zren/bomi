@@ -803,9 +803,9 @@ auto PlayEngine::Data::process(QEvent *event) -> void
         emit p->editionsChanged();
         emit p->editionChanged();
         emit p->started(params.mrl());
-        if (params.set_name(mpv.get<MpvUtf8>("media-title").data))
-            history->update(&params, u"name"_q, false);
-        history->update();
+        // if (params.set_name(mpv.get<MpvUtf8>("media-title").data))
+        //     history->update(&params, u"name"_q, false);
+        // history->update();
         break;
     } case EndPlayback: {
         QSharedPointer<MrlState> last; int reason, error;
@@ -830,7 +830,7 @@ auto PlayEngine::Data::process(QEvent *event) -> void
             break;
         }
         updateState(state);
-        history->update(last.data(), false);
+        // history->update(last.data(), false);
         emit p->finished(last->mrl(), eof);
         break;
     } case NotifySeek:
@@ -850,7 +850,7 @@ auto PlayEngine::Data::process(QEvent *event) -> void
         mutex.unlock();
         params.m_mutex = &mutex;
         emit p->endSyncMrlState();
-        history->update(&params, false);
+        // history->update(&params, false);
 
         qDeleteAll(info.streamings);
         info.streamings.clear();
