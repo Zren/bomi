@@ -226,17 +226,17 @@ auto VideoProcessor::reconfig(mp_image_params *in, mp_image_params *out) -> int
     d->mp_csp_out = MP_CSP_AUTO;
     d->mp_lv_out = MP_CSP_LEVELS_AUTO;
     if (d->spaceOpt != ColorSpace::Auto)
-        d->mp_csp_out = out->colorspace = enum2mp(d->spaceOpt);
+        d->mp_csp_out = out->color.space = enum2mp(d->spaceOpt);
     if (d->rangeOpt != ColorRange::Auto)
-        d->mp_lv_out = out->colorlevels = enum2mp(d->rangeOpt);
+        d->mp_lv_out = out->color.levels = enum2mp(d->rangeOpt);
 
-    if (_Change(d->spaceIn, mp2enum(in->colorspace)))
+    if (_Change(d->spaceIn, mp2enum(in->color.space)))
         emit inputColorSpaceChanged(d->spaceIn);
-    if (_Change(d->rangeIn, mp2enum(in->colorlevels)))
+    if (_Change(d->rangeIn, mp2enum(in->color.levels)))
         emit inputColorRangeChanged(d->rangeIn);
-    if (_Change(d->spaceOut, mp2enum(out->colorspace)))
+    if (_Change(d->spaceOut, mp2enum(out->color.space)))
         emit outputColorSpaceChanged(d->spaceOut);
-    if (_Change(d->rangeOut, mp2enum(out->colorlevels)))
+    if (_Change(d->rangeOut, mp2enum(out->color.levels)))
         emit outputColorRangeChanged(d->rangeOut);
 
     d->interpolator.setTargetFps(d->intrplOption.fps());
@@ -277,7 +277,7 @@ static auto avgLuma(const mp_image *mpi, F &&addLine) -> double
     const int bits = mpi->fmt.plane_bits;
     avg /= mpi->h * mpi->w;
     avg /= (1 << bits) - 1;
-    if (mpi->params.colorlevels == MP_CSP_LEVELS_TV)
+    if (mpi->params.color.levels == MP_CSP_LEVELS_TV)
         avg = (avg - 16.0/255)*255.0/(235.0 - 16.0);
     return avg;
 }
@@ -436,9 +436,9 @@ auto VideoProcessor::filterOut() -> int
         emit outputInterlacedChanged();
     const auto img = mpi.take();
     if (d->mp_csp_out != MP_CSP_AUTO)
-        img->params.colorspace = d->mp_csp_out;
+        img->params.color.space = d->mp_csp_out;
     if (d->mp_lv_out != MP_CSP_LEVELS_AUTO)
-        img->params.colorlevels = d->mp_lv_out;
+        img->params.color.levels = d->mp_lv_out;
     vf_add_output_frame(d->vf, img);
     return 0;
 }
