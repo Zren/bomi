@@ -56,7 +56,10 @@ auto MotionInterpolator::push(MpImage &&mpi) -> void
         int additional = 0;
         do {
             d->push(std::move(MpImage(mpi)), d->next(), additional);
-            additional = MP_IMGFIELD_ADDITIONAL;
+
+            // TODO:
+            // MP_IMGFIELD_ADDITIONAL is part of Bomi's custom mpv.
+            additional = false; // MP_IMGFIELD_ADDITIONAL;
         } while (d->next() < mpi->pts);
     }
 }
