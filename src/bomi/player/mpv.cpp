@@ -132,9 +132,10 @@ auto Mpv::render(OpenGLFramebufferObject *frame, OpenGLFramebufferObject *osd, c
     }
     if (osd) {
         d->osd.prepare(osd);
-        mpv_opengl_cb_render_osd(d->gl, osd->width(), osd->height(),
-                                 m.left(), m.top(), m.right(), m.bottom(),
-                                 1.0, MpvOsdRenderer::callback, &d->osd);
+        // TODO: mpv_opengl_cb_render_osd is part of Bomi's custom mpv.
+        // mpv_opengl_cb_render_osd(d->gl, osd->width(), osd->height(),
+        //                          m.left(), m.top(), m.right(), m.bottom(),
+        //                          1.0, MpvOsdRenderer::callback, &d->osd);
         d->osd.end();
     }
     return ret;
