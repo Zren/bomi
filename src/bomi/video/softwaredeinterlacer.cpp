@@ -89,6 +89,10 @@ auto SoftwareDeinterlacer::pop() -> MpImage
     if (!d->pass) {
         switch (d->type) {
         case Mark: {
+            // TODO:
+            // Bomi's custom mpv added the MP_IMGFIELD_BOTTOM and MP_IMGFIELD_TOP flags.
+            // Even mpv v27 has not added those flags, so we'll comment out this condition for now.
+            /*
             static const int fields[] = { MP_IMGFIELD_BOTTOM, MP_IMGFIELD_TOP };
             const bool topFirst = d->input->fields & MP_IMGFIELD_TOP_FIRST;
             ret = d->input;
@@ -99,6 +103,7 @@ auto SoftwareDeinterlacer::pop() -> MpImage
                 ret->fields &= ~(MP_IMGFIELD_BOTTOM | MP_IMGFIELD_TOP);
                 ret->fields |= fields[!topFirst];
             }
+            */
             break;
         } case Graph: {
             ret = d->graph.pull();
