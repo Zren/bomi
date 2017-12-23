@@ -61,7 +61,6 @@ VideoPreview::VideoPreview(QQuickItem *parent)
     d->mpv.setOption("pause", "yes");
     d->mpv.setOption("keep-open", "always");
     d->mpv.setOption("vd-lavc-skiploopfilter", "all");
-    d->mpv.setOption("use-text-osd", "no");
     d->mpv.setOption("audio-display", "no");
     d->mpv.initialize(Log::Error);
     d->mpv.setUpdateCallback([=] () { _PostEvent(this, NewFrame); });
