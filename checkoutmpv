@@ -1,0 +1,25 @@
+#!/bin/bash
+
+cd src/mpv
+
+# Reset existing patches
+git reset --hard HEAD
+
+# Checkout new tag
+tag="${1}"
+if [[ "$tag" == "v"* ]]; then # checkoutmpv v0.18.0
+    tag="${tag}"
+elif [[ "$tag" == *.* ]]; then # checkoutmpv 18.1
+    tag="v0.${tag}"
+else
+    tag="v0.${tag}.0" # checkoutmpv 18
+fi
+git checkout "$tag"
+
+# Apply patches
+for f in ../mpv-patches/*; do
+    echo "[patch] applying $f"
+    git apply $f
+done
+
+cd ../..
