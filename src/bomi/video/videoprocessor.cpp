@@ -347,7 +347,12 @@ auto VideoProcessor::filterIn(mp_image *_mpi) -> int
     }
 
     const bool hwacc = _Change(d->hwacc, !!IMGFMT_IS_HWACCEL(_mpi->imgfmt));
-    const bool hwtype = _Change(d->hwdecType, _mpi->hwdec_type);
+
+    // TODO:
+    // hwdec_type is part of Bomi's custom mpv.
+    // Assuming it's always false worked for me.
+    const bool hwtype = false; // _Change(d->hwdecType, _mpi->hwdec_type);
+
     if (hwacc || hwtype)
         d->updateDeint();
     if (hwtype)
