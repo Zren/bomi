@@ -326,8 +326,8 @@ auto VideoProcessor::hwdec() const -> QString
         return u"vaapi"_q;
     case HWDEC_VAAPI_COPY:
         return u"vaapi-copy"_q;
-    case HWDEC_VDA:
-        return u"vda"_q;
+    // case HWDEC_VDA:
+    //     return u"vda"_q;
     case HWDEC_VDPAU:
         return u"vdpau"_q;
     case HWDEC_DXVA2_COPY:
@@ -470,7 +470,7 @@ auto VideoProcessor::uninit() -> void
 auto query_video_format(quint32 format) -> int
 {
     switch (format) {
-    case IMGFMT_VDPAU:     case IMGFMT_VDA:       case IMGFMT_VAAPI:
+    case IMGFMT_VDPAU:   /*case IMGFMT_VDA:*/     case IMGFMT_VAAPI:
     case IMGFMT_420P:      case IMGFMT_444P:
     case IMGFMT_420P16:
     case IMGFMT_420P14:
