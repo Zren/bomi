@@ -379,12 +379,12 @@ af_info create_info() {
         mpv::null_option
     };
     static af_info info = {
-        "bomi audio controller",
-        "dummy",
-        AudioController::open,
-        sizeof(bomi_af_priv),
-        nullptr,
-        options
+        .info = "bomi audio controller",
+        .name = "dummy",
+        .open = AudioController::open,
+        .priv_size = sizeof(bomi_af_priv),
+        .priv_defaults = nullptr,
+        .options = options
     };
     return info;
 }
