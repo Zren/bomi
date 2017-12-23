@@ -20,16 +20,20 @@ auto FFmpegFilterGraph::push(const MpImage &in) -> bool
     if (!m_graph)
         return false;
     auto src = m_src->outputs[0];
-    auto frame = av_frame_alloc();
-    mp_image_copy_fields_to_av_frame(frame, const_cast<mp_image*>(in.data()));
-    int flags = AV_BUFFER_FLAG_READONLY;
-    auto freeMpImage = [](void *in, uint8_t*) { delete static_cast<MpImage*>(in); };
-    for (int n = 0; n < in->num_planes; ++n) {
-        auto plane = new MpImage(in);
-        const size_t size = in->stride[n] * in->h;
-        frame->buf[n] = av_buffer_create(in->planes[n], size,
-                                         freeMpImage, plane, flags);
-    }
+
+    // auto frame = av_frame_alloc();
+    // mp_image_copy_fields_to_av_frame(frame, const_cast<mp_image*>(in.data()));
+    // int flags = AV_BUFFER_FLAG_READONLY;
+    // auto freeMpImage = [](void *in, uint8_t*) { delete static_cast<MpImage*>(in); };
+    // for (int n = 0; n < in->num_planes; ++n) {
+    //     auto plane = new MpImage(in);
+    //     const size_t size = in->stride[n] * in->h;
+    //     frame->buf[n] = av_buffer_create(in->planes[n], size,
+    //                                      freeMpImage, plane, flags);
+    // }
+    auto frame = mp_image_to_av_frame(const_cast<mp_image*>(in.data()));
+    // auto frame = mp_image_to_av_frame_and_unref(const_cast<mp_image*>(in.data()));
+
     if (in->pts == MP_NOPTS_VALUE)
         frame->pts = AV_NOPTS_VALUE;
     else
@@ -50,9 +54,12 @@ auto FFmpegFilterGraph::pull() -> MpImage
         av_frame_free(&frame);
         return MpImage();
     }
-    auto freeAvFrame = [](void *frame) { av_frame_free((AVFrame**)&frame); };
-    auto mpi = null_mp_image(frame, freeAvFrame);
-    mp_image_copy_fields_from_av_frame(mpi, frame);
+
+    // auto freeAvFrame = [](void *frame) { av_frame_free((AVFrame**)&frame); };
+    // auto mpi = null_mp_image(frame, freeAvFrame);
+    // mp_image_copy_fields_from_av_frame(mpi, frame);
+    auto mpi = mp_image_from_av_frame(frame);
+
     return MpImage::wrap(mpi);
 }
 
