@@ -161,10 +161,10 @@ auto VideoProcessor::open(vf_instance *vf) -> int
     vf->control = [] (vf_instance *vf, int request, void *data) -> int
         { return priv(vf)->control(request, data); };
 
-    _Delete(d->hwdec);
-    hwdec_request_api(vf->hwdec, OS::hwAcc()->name().toLatin1());
-    if (vf->hwdec && vf->hwdec->hwctx)
-        d->hwdec = new HwDecTool(vf->hwdec->hwctx);
+    // _Delete(d->hwdec);
+    // hwdec_request_api(vf->hwdec, OS::hwAcc()->name().toLatin1());
+    // if (vf->hwdec && vf->hwdec->hwctx)
+    //     d->hwdec = new HwDecTool(vf->hwdec->hwctx);
     mp_image_pool_clear(d->pool);
     p->vp->stopSkipping();
     return true;

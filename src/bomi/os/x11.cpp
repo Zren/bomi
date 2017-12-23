@@ -721,6 +721,8 @@ VdpauInfo::VdpauInfo()
 auto VdpauInfo::download(mp_hwdec_ctx *ctx, const mp_image *mpi,
                          mp_image_pool *pool) -> mp_image*
 {
+    return nullptr;
+    /*
     if (!ctx->vdpau_ctx)
         return nullptr;
     auto img = mp_image_pool_get(pool, IMGFMT_420P, mpi->w, mpi->h);
@@ -732,6 +734,7 @@ auto VdpauInfo::download(mp_hwdec_ctx *ctx, const mp_image *mpi,
         return img;
     talloc_free(img);
     return nullptr;
+    */
 }
 
 #endif
