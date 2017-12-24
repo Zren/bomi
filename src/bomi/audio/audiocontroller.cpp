@@ -234,18 +234,18 @@ auto AudioController::control(int cmd, void *arg) -> int
         d->scale = *(double*)arg;
         d->dirty |= Scale;
         return d->tempoScalerActivated;
-    case AF_CONTROL_SET_FORMAT:
-        d->fmt_conv = *(int*)arg;
-        if (!isSupported(d->fmt_conv))
-            d->fmt_conv = AF_FORMAT_UNKNOWN;
-        return !!d->fmt_conv;
-    case AF_CONTROL_SET_RESAMPLE_RATE:
-        d->outrate = *(int *)arg;
-        d->dirty |= Resample;
-        return AF_OK;
-    case AF_CONTROL_SET_CHANNELS:
-        d->layout = ChannelLayoutMap::toLayout(*(mp_chmap*)arg);
-        return AF_OK;
+    // case AF_CONTROL_SET_FORMAT:
+    //     d->fmt_conv = *(int*)arg;
+    //     if (!isSupported(d->fmt_conv))
+    //         d->fmt_conv = AF_FORMAT_UNKNOWN;
+    //     return !!d->fmt_conv;
+    // case AF_CONTROL_SET_RESAMPLE_RATE:
+    //     d->outrate = *(int *)arg;
+    //     d->dirty |= Resample;
+    //     return AF_OK;
+    // case AF_CONTROL_SET_CHANNELS:
+    //     d->layout = ChannelLayoutMap::toLayout(*(mp_chmap*)arg);
+    //     return AF_OK;
     case AF_CONTROL_RESET:
         for (auto filter : d->filters)
             filter->reset();
