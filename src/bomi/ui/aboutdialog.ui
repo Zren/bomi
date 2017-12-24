@@ -122,6 +122,13 @@
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mpv_info">
+           <property name="text">
+            <string>Compiled with mpv %1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QLabel" name="copyright">
            <property name="text">
             <string notr="true">Copyright (C) 2008-%1 %2 A.K.A. xylosper</string>

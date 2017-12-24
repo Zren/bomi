@@ -1,6 +1,7 @@
 #include "aboutdialog.hpp"
 #include "player/app.hpp"
 #include "ui_aboutdialog.h"
+#include "../mpv/build/version.h"
 #include <QTextBrowser>
 
 struct AboutDialog::Data {
@@ -17,6 +18,7 @@ AboutDialog::AboutDialog(QWidget *parent)
 #define UI_LABEL_ARG(label, arg) d->ui.label->setText(d->ui.label->text().arg)
     UI_LABEL_ARG(version, arg(_L(cApp.version())));
     UI_LABEL_ARG(qt_info, arg(_L(qVersion()), _L(QT_VERSION_STR)));
+    UI_LABEL_ARG(mpv_info, arg(_L(VERSION)));
     UI_LABEL_ARG(copyright, arg(QDate::currentDate().year()).arg(tr("Lee, Byoung-young")));
     UI_LABEL_ARG(contacts, arg(link("http://bomi-player.github.io") % "<br>"_a).
                  arg(link("http://twitter.com/bomi_player") % "<br>"_a).
