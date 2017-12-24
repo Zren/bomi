@@ -1,3 +1,48 @@
+diff --git a/video/csputils.c b/video/csputils.c
+index 8f6a9e3..a1f6906 100644
+--- a/video/csputils.c
++++ b/video/csputils.c
+@@ -100,20 +100,20 @@ const struct m_opt_choice_alternatives mp_chroma_names[] = {
+     {0}
+ };
+ 
+-void mp_colorspace_merge(struct mp_colorspace *orig, struct mp_colorspace *new)
++void mp_colorspace_merge(struct mp_colorspace *orig, struct mp_colorspace *newColorSpace)
+ {
+     if (!orig->space)
+-        orig->space = new->space;
++        orig->space = newColorSpace->space;
+     if (!orig->levels)
+-        orig->levels = new->levels;
++        orig->levels = newColorSpace->levels;
+     if (!orig->primaries)
+-        orig->primaries = new->primaries;
++        orig->primaries = newColorSpace->primaries;
+     if (!orig->gamma)
+-        orig->gamma = new->gamma;
++        orig->gamma = newColorSpace->gamma;
+     if (!orig->nom_peak)
+-        orig->nom_peak = new->nom_peak;
++        orig->nom_peak = newColorSpace->nom_peak;
+     if (!orig->sig_peak)
+-        orig->sig_peak = new->sig_peak;
++        orig->sig_peak = newColorSpace->sig_peak;
+ }
+ 
+ // The short name _must_ match with what vf_stereo3d accepts (if supported).
+diff --git a/video/csputils.h b/video/csputils.h
+index 9eaafbe..022b812 100644
+--- a/video/csputils.h
++++ b/video/csputils.h
+@@ -126,7 +126,7 @@ struct mp_colorspace {
+ };
+ 
+ // Replaces unknown values in the first struct by those of the second struct
+-void mp_colorspace_merge(struct mp_colorspace *orig, struct mp_colorspace *new);
++void mp_colorspace_merge(struct mp_colorspace *orig, struct mp_colorspace *newColorSpace);
+ 
+ struct mp_csp_params {
+     struct mp_colorspace color; // input colorspace
 diff --git a/video/mp_image_pool.c b/video/mp_image_pool.c
 index 10966ee..59a573b 100644
 --- a/video/mp_image_pool.c
