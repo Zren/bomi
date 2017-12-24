@@ -300,11 +300,11 @@ static auto luminance(const mp_image *mpi) -> double
     case IMGFMT_411P:   case IMGFMT_410P:   case IMGFMT_Y8:
     case IMGFMT_444AP:  case IMGFMT_422AP:  case IMGFMT_420AP:
         return lumaYCbCrPlanar<quint8>(mpi);
-    case IMGFMT_444P16: case IMGFMT_444P14: case IMGFMT_444P12:
+    case IMGFMT_444P16: // case IMGFMT_444P14: case IMGFMT_444P12:
     case IMGFMT_444P10: case IMGFMT_444P9:  case IMGFMT_422P16:
-    case IMGFMT_422P14: case IMGFMT_422P12: case IMGFMT_422P10:
-    case IMGFMT_422P9:  case IMGFMT_420P16: case IMGFMT_420P14:
-    case IMGFMT_420P12: case IMGFMT_420P10: case IMGFMT_420P9:
+    case IMGFMT_422P10: // case IMGFMT_422P14: case IMGFMT_422P12:
+    case IMGFMT_422P9:  case IMGFMT_420P16: // case IMGFMT_420P14:
+    case IMGFMT_420P10: case IMGFMT_420P9:  // case IMGFMT_420P12:
     case IMGFMT_Y16:
         return lumaYCbCrPlanar<quint16>(mpi);
     case IMGFMT_YUYV:   case IMGFMT_UYVY: {
@@ -473,8 +473,8 @@ auto query_video_format(quint32 format) -> int
     case IMGFMT_VDPAU:   /*case IMGFMT_VDA:*/     case IMGFMT_VAAPI:
     case IMGFMT_420P:      case IMGFMT_444P:
     case IMGFMT_420P16:
-    case IMGFMT_420P14:
-    case IMGFMT_420P12:
+    // case IMGFMT_420P14:
+    // case IMGFMT_420P12:
     case IMGFMT_420P10:
     case IMGFMT_420P9:
     case IMGFMT_NV12:      case IMGFMT_NV21:
